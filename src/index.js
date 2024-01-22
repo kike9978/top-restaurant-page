@@ -3,6 +3,8 @@ import TabMenu from "./tab-menu";
 import About from "./about";
 import Contact from "./contact";
 import Home from "./home";
+import "./styles/reset.css"
+import "./styles/global.css"
 
 const content = document.querySelector("div#content")
 const main = document.createElement("main")
@@ -56,18 +58,25 @@ function handleTabMenu(e) {
     console.log("Estoy activo")
     return
   }
-  tabMenu.childNodes.forEach(item => item.setAttribute("tab-active", ""))
+  tabMenu.childNodes.forEach(item => {
+    item.setAttribute("tab-active", "")
+    item.classList.remove("active")
+  })
   e.target.setAttribute("tab-active", true)
   console.log(e.target.innetText)
+
   switch (e.target.innerText) {
     case "Home":
       main.replaceChildren(home)
+      e.target.classList.add("active")
       break;
     case "About":
       main.replaceChildren(about)
+      e.target.classList.add("active")
       break;
     case "Contacto":
       main.replaceChildren(contact)
+      e.target.classList.add("active")
       break;
     default:
       console.error('No se encontro la opción')

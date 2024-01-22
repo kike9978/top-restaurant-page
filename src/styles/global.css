@@ -1,0 +1,15 @@
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.tabmenu{
+  display: flex;
+  gap: 1rem;
+}
+.tabmenu li{
+list-style: none;
+}
+.tabmenu li.active{
+  background-color: black;
+  color: white;
+}
