@@ -1,4 +1,5 @@
 const path = require("path")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 module.exports = {
   entry: {
@@ -10,11 +11,24 @@ module.exports = {
     clean: true
   },
   mode: "development",
-  devtool: "inline-source-map",
+  // devtool: "inline-source-map",
   devServer: {
     static: "./src"
   },
-  optimization: {
-    runtimeChunk: "single",
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      filename: "index.html",
+      inject: "head",
+      scriptLoading: "defer"
+    })
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+      }
+    ]
   }
 }
