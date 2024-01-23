@@ -54,29 +54,27 @@ console.log(tabMenu.childNodes)
 
 function handleTabMenu(e) {
 
-  if (e.target.getAttribute("tab-active")) {
-    console.log("Estoy activo")
+  if (e.target.parentNode.getAttribute("tab-active")) {
     return
   }
   tabMenu.childNodes.forEach(item => {
     item.setAttribute("tab-active", "")
     item.classList.remove("active")
   })
-  e.target.setAttribute("tab-active", true)
-  console.log(e.target.innetText)
+  e.target.parentNode.setAttribute("tab-active", true)
 
   switch (e.target.innerText) {
     case "Home":
       main.replaceChildren(home)
-      e.target.classList.add("active")
+      e.target.parentNode.classList.add("active")
       break;
     case "About":
       main.replaceChildren(about)
-      e.target.classList.add("active")
+      e.target.parentNode.classList.add("active")
       break;
     case "Contacto":
       main.replaceChildren(contact)
-      e.target.classList.add("active")
+      e.target.parentNode.classList.add("active")
       break;
     default:
       console.error('No se encontro la opción')

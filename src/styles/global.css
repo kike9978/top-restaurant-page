@@ -9,7 +9,12 @@ body {
 .tabmenu li{
 list-style: none;
 }
-.tabmenu li.active{
+
+.tabmenu li button{
+  cursor: pointer;
+  border: none;
+  }
+.tabmenu li.active button{
   background-color: black;
   color: white;
 }

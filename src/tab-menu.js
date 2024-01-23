@@ -10,9 +10,10 @@ export default function TabMenu() {
 
   menuItems.forEach(item => {
     const li = document.createElement("li");
+    const btn = document.createElement("button");
     li.className = "tab-element";
-    li.innerText = item.page;
-    li.style.cursor = "pointer"
+    btn.innerText = item.page;
+    li.appendChild(btn)
     if (item.isActive) {
       li.setAttribute("tab-active", "true")
       li.classList.add("active")
