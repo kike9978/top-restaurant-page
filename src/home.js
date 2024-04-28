@@ -1,27 +1,31 @@
-import H1 from "./components/h1"
+import H1 from "./components/h1";
 import MenuItem from "./components/menuItem";
+
 const menuData = [
   {
-    headingText: "Comida",
-    descriptionText: "Un manjar",
-    priceValue: 234
+    title: "Comida",
+    description: "Un manjar",
+    price: 234
+  },
+  {
+    title: "Pato sabroso",
+    description: "Un manjar",
+    price: 234
   }
 ]
 
-console.log({ ...menuData[0] })
-
-const title = H1("Buenas noches")
-const elem = document.createElement("div")
-const menuItem = MenuItem({ ...menuData[0] })
+const title = H1("Buenas noches");
+const elem = document.createElement("div");
 elem.style.backgroundColor = "red";
-elem.style.width = "300px"
-elem.style.height = "300px"
-elem.appendChild(title)
-elem.appendChild(menuItem)
+elem.style.width = "300px";
+elem.style.height = "300px";
+elem.appendChild(title);
 
-
+menuData.forEach(item => {
+  const menuItem = MenuItem(item.title, item.description, item.price);
+  elem.appendChild(menuItem); // Append each menuItem inside the loop
+});
 
 export default function Home() {
-  return elem
+  return elem;
 }
-
