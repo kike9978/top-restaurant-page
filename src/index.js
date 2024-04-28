@@ -2,43 +2,20 @@
 import TabMenu from "./tab-menu";
 import About from "./about";
 import Contact from "./contact";
-import Home from "./home";
+import Menu from "./menu";
 import "./styles/reset.css"
 import "./styles/global.css"
 
 const content = document.querySelector("div#content")
 const main = document.createElement("main")
 
-// function component(){
-//   const element = document.createElement("div");
-//   const btn = document.createElement("button");
-
-//   element.innerText = myName("Juan")
-//   element.classList.add("hello")
-
-//   btn.innerText = 'Click me and check the console!';
-//   btn.onclick = printMe;
-
-//   const myIcon = new Image()
-//   myIcon.src = Icon;
-
-//   element.appendChild(myIcon);
-//   element.appendChild(btn);
-
-//   console.table(Data)
-//   console.table(Notes)
-
-//   return element;
-// }
-
-
-
+main.classList.add("w-full")
 
 const tabMenu = TabMenu()
 content.appendChild(tabMenu)
 content.appendChild(main)
 
-const [home, about, contact] = [Home(), About(), Contact()];
+const [menu, about, contact] = [Menu(), About(), Contact()];
 
 // TabMenu().childNodes.forEach(item => {
 //   item.addEventListener("click", (e) => console.log("hola"))
@@ -64,8 +41,8 @@ function handleTabMenu(e) {
   e.target.parentNode.setAttribute("tab-active", true)
 
   switch (e.target.innerText) {
-    case "Home":
-      main.replaceChildren(home)
+    case "Menu":
+      main.replaceChildren(menu)
       e.target.parentNode.classList.add("active")
       break;
     case "About":
@@ -81,7 +58,7 @@ function handleTabMenu(e) {
   }
 }
 
-main.appendChild(home)
+main.appendChild(menu)
 
 
 

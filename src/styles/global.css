@@ -20,7 +20,7 @@ body {
   border: none;
 }
 
-.tabmenu li.active button {
+.tabmenu li.active {
   background-color: black;
   color: white;
 }
