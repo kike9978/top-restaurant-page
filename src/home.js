@@ -9,7 +9,7 @@ const menuData = [
   },
   {
     title: "Pato sabroso",
-    description: "Un manjar",
+    description: "Sabrusar injustificada",
     price: 234
   }
 ]
