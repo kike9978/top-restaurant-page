@@ -1,20 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.tabmenu{
+.tabmenu {
   display: flex;
   gap: 1rem;
 }
-.tabmenu li{
-list-style: none;
+
+.tabmenu li {
+  list-style: none;
 }
 
-.tabmenu li button{
+.tabmenu li button {
   cursor: pointer;
   border: none;
-  }
-.tabmenu li.active button{
+}
+
+.tabmenu li.active button {
   background-color: black;
   color: white;
 }

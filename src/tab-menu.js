@@ -1,6 +1,7 @@
 export default function TabMenu() {
   const tabMenu = document.createElement("ul")
   tabMenu.className = "tabmenu"
+  tabMenu.classList.add("bg-blue-500")
   tabMenu.id = "tab-menu"
   const menuItems = [
     { page: "Home", isActive: true },
