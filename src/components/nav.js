@@ -1,6 +1,6 @@
 const nav = document.createElement("nav")
 
-nav.classList.add("w-full", "bg-red-400", "flex", "justify-between")
+nav.classList.add("w-full", "flex", "justify-between")
 const tabMenu = document.createElement("ul")
 const logo = document.createElement("button")
 

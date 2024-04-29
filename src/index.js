@@ -1,4 +1,4 @@
-import Nav from "./nav";
+import Nav from "./components/nav";
 import About from "./about";
 import Contact from "./contact";
 import Menu from "./menu";
@@ -8,7 +8,7 @@ import "./styles/global.css"
 const content = document.querySelector("div#content")
 const main = document.createElement("main")
 
-main.classList.add("w-full")
+main.classList.add("w-full", "h-full")
 
 const tabMenu = Nav()
 content.appendChild(tabMenu)
