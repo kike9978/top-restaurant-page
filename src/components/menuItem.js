@@ -8,10 +8,10 @@ export default function menuItem(headingText, descriptionText, priceValue) {
     const header = document.createElement("div")
     const image = document.createElement("div")
 
-    itemContainer.classList.add("p-4")
-    heading.classList.add("text-lg", "font-bold")
+    heading.classList.add("text-xl")
     header.classList.add("flex", "justify-between")
-    image.classList.add("h-40", "w-40", "bg-zinc-900", "rounded-lg")
+    image.classList.add("size-80", "bg-zinc-900", "rounded-3xl")
+    itemContainer.classList.add("flex", "flex-col", "gap-2")
 
     header.appendChild(heading)
     header.appendChild(price)
@@ -23,7 +23,7 @@ export default function menuItem(headingText, descriptionText, priceValue) {
 
     heading.innerText = headingText;
     description.innerText = descriptionText;
-    price.innerText = priceValue + "$";
+    price.innerText = "$" + priceValue;
 
     return itemContainer;
 }

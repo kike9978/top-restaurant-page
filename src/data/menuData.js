@@ -1,26 +1,26 @@
 export const menuData = [
     {
-        title: "Comida",
+        title: "Gorditas",
         description: "Un manjar",
         price: 234
     },
     {
-        title: "Pato sabroso",
+        title: "Empanadas",
         description: "Sabrusar injustificada",
         price: 234
     },
     {
-        title: "Comida",
+        title: "Cabecitas de perro",
         description: "Un manjar",
         price: 234
     },
     {
-        title: "Gorditas de frijol",
+        title: "Tacos dorados",
         description: "Sabrusar injustificada",
         price: 234
     },
     {
-        title: "Comida",
+        title: "Picadas",
         description: "Un manjar",
         price: 234
     },

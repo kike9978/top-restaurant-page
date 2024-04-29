@@ -7,7 +7,7 @@ const title = H1("Menu");
 const elem = document.createElement("div");
 const menuContainer = document.createElement("div")
 
-menuContainer.classList.add("flex", "overflow-x-auto")
+menuContainer.classList.add("flex", "overflow-x-auto", "no-scrollbar", "gap-1")
 
 elem.appendChild(title);
 elem.appendChild(menuContainer)
@@ -15,7 +15,7 @@ elem.appendChild(menuContainer)
 
 menuData.forEach(item => {
   const menuItem = MenuItem(item.title, item.description, item.price);
-  menuContainer.appendChild(menuItem); // Append each menuItem inside the loop
+  menuContainer.appendChild(menuItem);
 });
 
 export default function Menu() {
