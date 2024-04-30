@@ -6,6 +6,7 @@ const logo = document.createElement("button")
 nav.classList.add("w-full", "flex", "justify-between")
 tabMenu.classList.add("tabmenu", "flex", "justify-between", "gap-4")
 tabMenu.id = "tab-menu"
+logo.classList.add("hidden", "md:block")
 
 
 const menuItems = [

@@ -9,8 +9,8 @@ const img = document.createElement("img")
 
 elem.innerHTML = `<div class="flex flex-col-reverse md:flex-row flex-grow">
     <div class="flex flex-col justify-between flex-grow">
-        <div class="flex flex-grow flex-col justify-center gap-4">
-        <h1 class="text-2xl font-bold text-purple-700">Déjanos un comentario</h1>
+        <div class="flex flex-grow flex-col mt-14 gap-4">
+        <h1 class="text-5xl font-bold text-purple-700">Déjanos un comentario</h1>
           <form action="" class="flex flex-col items-start gap-3">
               <label class="flex flex-col">
                   Nombre
@@ -27,7 +27,7 @@ elem.innerHTML = `<div class="flex flex-col-reverse md:flex-row flex-grow">
               <button class="bg-purple-950 text-white px-2 py-1 rounded">Envíar</button>
           </form>
         </div>
-        <div class="mb-6">
+        <div class="mb-6 text-black text-opacity-60">
             <p>Callejón Brisa Marina #22, Veracruz, Ver. 
             <p>(555) 555-5555</p>
             <p>correo@email.com</p>
