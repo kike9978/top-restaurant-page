@@ -11,10 +11,11 @@ export default function menuItem(headingText, descriptionText, priceValue, imgSr
     const image = document.createElement("div")
 
     heading.classList.add("text-xl")
-    header.classList.add("flex", "justify-between", "items-baseline")
+    header.classList.add("flex", "flex-col", "items-baseline")
     image.classList.add("size-80", "bg-zinc-900", "rounded-3xl", "overflow-hidden")
     img.classList.add("h-full", "w-full", "object-cover")
     itemContainer.classList.add("flex", "flex-col", "gap-2")
+    description.classList.add("text-black", "text-opacity-60")
 
     image.appendChild(img)
 

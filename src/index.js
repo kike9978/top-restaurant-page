@@ -5,10 +5,12 @@ import Menu from "./menu";
 import "./styles/reset.css"
 import "./styles/global.css"
 
+
 const content = document.querySelector("div#content")
 const main = document.createElement("main")
 
 main.classList.add("w-full", "h-full")
+content.classList.add("px-10")
 
 const tabMenu = Nav()
 content.appendChild(tabMenu)
@@ -29,22 +31,18 @@ function handleNav(e) {
   }
   tabMenu.childNodes[1].childNodes.forEach(item => {
     item.setAttribute("tab-active", "")
-    item.classList.remove("active")
   })
   e.target.parentNode.setAttribute("tab-active", true)
 
   switch (e.target.innerText) {
     case "MENU":
       main.replaceChildren(menu)
-      e.target.parentNode.classList.add("active")
       break;
     case "ABOUT":
       main.replaceChildren(about)
-      e.target.parentNode.classList.add("active")
       break;
     case "CONTACTO":
       main.replaceChildren(contact)
-      e.target.parentNode.classList.add("active")
       break;
     default:
       console.log(e.target.innerText)

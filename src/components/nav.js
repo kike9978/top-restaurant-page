@@ -1,9 +1,9 @@
 const nav = document.createElement("nav")
 
-nav.classList.add("w-full", "flex", "justify-between")
 const tabMenu = document.createElement("ul")
 const logo = document.createElement("button")
 
+nav.classList.add("w-full", "flex", "justify-between")
 tabMenu.classList.add("tabmenu", "flex", "justify-between", "gap-4")
 tabMenu.id = "tab-menu"
 
@@ -26,14 +26,13 @@ menuItems.forEach(item => {
   const btn = document.createElement("button");
 
 
-  li.classList.add("tab-element", "hover:bg-black", "hover:text-white", "cursor-pointer", "tracking-widest")
+  li.classList.add("tab-element", "cursor-pointer", "tracking-widest")
   btn.classList.add("p-2")
 
   btn.innerText = item.page.toUpperCase();
   li.appendChild(btn)
   if (item.isActive) {
     li.setAttribute("tab-active", "true")
-    li.classList.add("active")
   }
   tabMenu.appendChild(li);
 })
