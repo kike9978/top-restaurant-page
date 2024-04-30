@@ -15,7 +15,7 @@ const menuItems = [
   { page: "Contacto", isActive: false }
 ]
 
-logo.innerText = "HOME"
+logo.innerText = "ANTOJITOS"
 
 
 nav.appendChild(logo);
