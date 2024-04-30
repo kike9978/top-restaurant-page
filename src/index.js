@@ -10,7 +10,7 @@ const content = document.querySelector("div#content")
 const main = document.createElement("main")
 
 main.classList.add("w-full", "h-full")
-content.classList.add("px-10")
+
 
 const tabMenu = Nav()
 content.appendChild(tabMenu)
@@ -23,7 +23,6 @@ tabMenu.childNodes.forEach(item => {
   item.addEventListener("click", e => handleNav(e));
 });
 
-console.log(tabMenu.childNodes[1].childNodes)
 function handleNav(e) {
 
   if (e.target.parentNode.getAttribute("tab-active")) {
